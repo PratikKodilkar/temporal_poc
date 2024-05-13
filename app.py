@@ -109,7 +109,7 @@ class WeatherDataProcessor:
             '''
             # Construct email message
             message = Mail(
-                from_email='pratikkodilkar123@gmail.com',
+                from_email=os.environ.get('EMAIL_USER'),
                 to_emails=[receiver_email],
                 subject='Weather Report',
                 html_content=html_content
